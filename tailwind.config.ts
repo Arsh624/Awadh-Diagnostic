@@ -9,8 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: {
+          red: "#D32F2F",
+          blue: "#29B6F6",
+          charcoal: "#1A1A2E",
+          offwhite: "#FDF6F0",
+          gray: "#F5F5F5",
+        },
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
+      },
+      keyframes: {
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "scroll-left": "scroll-left 30s linear infinite",
       },
     },
   },

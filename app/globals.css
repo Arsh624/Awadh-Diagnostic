@@ -3,25 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FDF6F0;
+  font-family: var(--font-inter), sans-serif;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .pause-animation {
+    animation-play-state: paused;
   }
 }
