@@ -8,6 +8,7 @@ import {
   Thermometer,
   Stethoscope,
 } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 const services = [
   {
@@ -80,43 +81,46 @@ export default function Services() {
 
         {/* Featured Card */}
         {featured && (
-          <div className="mb-6">
-            <div className="relative bg-gradient-to-r from-brand-charcoal to-[#0f1628] rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 shadow-xl overflow-hidden">
-              <div className="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full font-inter">
-                {featured.badge}
-              </div>
-              <div className="bg-brand-blue/20 p-5 rounded-xl">
-                <featured.icon size={40} className="text-brand-blue" />
-              </div>
-              <div>
-                <h3 className="font-poppins font-bold text-2xl text-white mb-2">
-                  {featured.name}
-                </h3>
-                <p className="font-inter text-white/70 text-base max-w-lg">
-                  {featured.description}
-                </p>
+          <FadeIn>
+            <div className="mb-6">
+              <div className="relative bg-gradient-to-r from-brand-charcoal to-[#0f1628] rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 shadow-xl overflow-hidden">
+                <div className="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full font-inter">
+                  {featured.badge}
+                </div>
+                <div className="bg-brand-blue/20 p-5 rounded-xl">
+                  <featured.icon size={40} className="text-brand-blue" />
+                </div>
+                <div>
+                  <h3 className="font-poppins font-bold text-2xl text-white mb-2">
+                    {featured.name}
+                  </h3>
+                  <p className="font-inter text-white/70 text-base max-w-lg">
+                    {featured.description}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         )}
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {rest.map((service) => (
-            <div
-              key={service.name}
-              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100"
-            >
-              <div className="bg-brand-red/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                <service.icon size={22} className="text-brand-red" />
+          {rest.map((service, i) => (
+            <FadeIn key={service.name} delay={i * 80}>
+              <div
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-gray-100"
+              >
+                <div className="bg-brand-red/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                  <service.icon size={22} className="text-brand-red" />
+                </div>
+                <h3 className="font-poppins font-semibold text-brand-charcoal text-base mb-1">
+                  {service.name}
+                </h3>
+                <p className="font-inter text-gray-500 text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="font-poppins font-semibold text-brand-charcoal text-base mb-1">
-                {service.name}
-              </h3>
-              <p className="font-inter text-gray-500 text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

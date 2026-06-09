@@ -1,4 +1,5 @@
 import { Award, UserCheck, Clock, IndianRupee } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 const stats = [
   {
@@ -45,19 +46,20 @@ export default function WhyUs() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
-            >
-              <div className={`${stat.bg} w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                <stat.icon size={26} className={stat.color} />
+          {stats.map((stat, i) => (
+            <FadeIn key={stat.label} delay={i * 100}>
+              <div
+                className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              >
+                <div className={`${stat.bg} w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <stat.icon size={26} className={stat.color} />
+                </div>
+                <div className={`font-poppins font-bold text-2xl ${stat.color} mb-1`}>
+                  {stat.value}
+                </div>
+                <div className="font-inter text-gray-500 text-sm">{stat.label}</div>
               </div>
-              <div className={`font-poppins font-bold text-2xl ${stat.color} mb-1`}>
-                {stat.value}
-              </div>
-              <div className="font-inter text-gray-500 text-sm">{stat.label}</div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
