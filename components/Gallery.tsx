@@ -28,12 +28,18 @@ export default function Gallery() {
 
       {/* Carousel track */}
       <div
-        className="flex gap-4 w-max animate-scroll-left hover:pause-animation"
+        className="flex gap-4 w-max animate-scroll-left"
         style={{ willChange: "transform" }}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
+        }}
       >
         {allImages.map((img, i) => (
           <div
-            key={i}
+            key={`${img.src}-${i}`}
             className="relative w-72 h-52 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl"
           >
             <Image
