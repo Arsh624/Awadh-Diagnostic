@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Facebook, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const WHATSAPP_URL =
   "https://wa.me/919450123521?text=Hi%2C+I+would+like+to+enquire+about+your+services+at+Awadh+Diagnostic+Centre.";
@@ -10,11 +9,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
-          <Image
-            src="/logo.png"
+          <img
+            src="/logo.svg"
             alt="Awadh Diagnostic Centre"
-            width={160}
-            height={48}
             className="h-12 w-auto object-contain"
           />
 
@@ -32,7 +29,15 @@ export default function Footer() {
               aria-label="Facebook"
               className="text-white/50 hover:text-brand-blue transition-colors"
             >
-              <Facebook size={22} />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
             </a>
             <a
               href="mailto:placeholder@awadhdiagnostic.com"

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -23,11 +22,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
+            <img
+              src="/logo.svg"
               alt="Awadh Diagnostic Centre"
-              width={160}
-              height={48}
               className="h-10 w-auto object-contain"
             />
           </a>

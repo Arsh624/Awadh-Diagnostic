@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <rect width="200" height="60" rx="8" fill="#1A1A2E"/>
+  <rect x="2" y="2" width="56" height="56" rx="6" fill="#D32F2F"/>
+  <text x="29" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white" text-anchor="middle">ADC</text>
+  <rect x="66" y="8" width="128" height="22" rx="4" fill="#D32F2F"/>
+  <text x="130" y="24" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="white" text-anchor="middle">AWADH</text>
+  <rect x="66" y="34" width="128" height="18" rx="4" fill="#29B6F6"/>
+  <text x="130" y="47" font-family="Arial, sans-serif" font-weight="bold" font-size="10" fill="white" text-anchor="middle">DIAGNOSTIC CENTRE</text>
+</svg>
