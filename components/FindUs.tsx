@@ -1,32 +1,28 @@
 import { MapPin, Phone, Clock } from "lucide-react";
 
 const MAPS_EMBED =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.0!2d80.3319!3d26.4499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI2JzU5LjYiTiA4MMKwMTknNTUuMCJF!5e0!3m2!1sen!2sin!4v1000000000000!5m2!1sen!2sin";
+  "https://maps.google.com/maps?q=Awadh+Diagnostic+Centre,+19,+Awadhpuri+Rd,+Lakhanpur,+Kanpur,+Uttar+Pradesh+208024&output=embed&z=16";
 
 const MAPS_DIRECTIONS =
-  "https://www.google.com/maps/dir/?api=1&destination=19+Lakhanpur+Housing+Society+Awadhpuri+Road+Kanpur+Uttar+Pradesh+India";
+  "https://www.google.com/maps/dir/?api=1&destination=Awadh+Diagnostic+Centre+19+Awadhpuri+Rd+Lakhanpur+Kanpur+Uttar+Pradesh+208024+India";
 
 export default function FindUs() {
   return (
-    <section id="find-us" className="py-20 bg-brand-offwhite">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-brand-red text-sm font-semibold uppercase tracking-widest font-inter">
-            Visit Us
-          </span>
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-brand-charcoal mt-2">
-            Find Us
-          </h2>
+    <section id="find-us" className="py-16 md:py-24 bg-brand-cream border-t border-brand-border">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex items-end justify-between border-b border-brand-border pb-6 md:pb-8 mb-10 md:mb-16">
+          <div>
+            <p className="font-inter text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Visit Us</p>
+            <h2 className="font-playfair font-bold text-4xl sm:text-5xl text-brand-dark">Find Us</h2>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-lg h-80 lg:h-96">
+          <div className="h-80 lg:h-96 overflow-hidden">
             <iframe
               src={MAPS_EMBED}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
+              style={{ border: 0, width: "100%", height: "100%" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -35,51 +31,33 @@ export default function FindUs() {
           </div>
 
           {/* Info */}
-          <div className="flex flex-col gap-6">
-            <div className="flex gap-4 items-start">
-              <div className="bg-brand-red/10 p-3 rounded-xl flex-shrink-0">
-                <MapPin size={22} className="text-brand-red" />
-              </div>
+          <div className="flex flex-col gap-10">
+            <div className="flex gap-5 items-start">
+              <MapPin size={18} className="text-brand-gold mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-poppins font-semibold text-brand-charcoal text-base">
-                  Address
-                </p>
-                <p className="font-inter text-gray-600 text-sm mt-1 leading-relaxed">
-                  19-Lakhanpur Housing Society,<br />
-                  Awadhpuri Road, Kanpur,<br />
-                  Uttar Pradesh, India
+                <p className="font-inter font-semibold text-brand-dark text-sm tracking-wide uppercase mb-1">Address</p>
+                <p className="font-inter text-brand-muted text-sm leading-relaxed">
+                  19, Awadhpuri Rd, Lakhanpur,<br />Lakhanpur Housing Society, Khyora,<br />Kanpur, Uttar Pradesh 208024
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 items-start">
-              <div className="bg-brand-blue/10 p-3 rounded-xl flex-shrink-0">
-                <Phone size={22} className="text-brand-blue" />
-              </div>
+            <div className="flex gap-5 items-start">
+              <Phone size={18} className="text-brand-gold mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-poppins font-semibold text-brand-charcoal text-base">
-                  Phone
-                </p>
-                <a
-                  href="tel:+919450123521"
-                  className="font-inter text-brand-blue text-sm mt-1 hover:underline"
-                >
-                  +91 94501 23521
+                <p className="font-inter font-semibold text-brand-dark text-sm tracking-wide uppercase mb-1">Phone</p>
+                <a href="tel:+919451426007" className="font-inter text-brand-muted text-sm hover:text-brand-gold transition-colors">
+                  +91 94514 26007
                 </a>
               </div>
             </div>
 
-            <div className="flex gap-4 items-start">
-              <div className="bg-green-100 p-3 rounded-xl flex-shrink-0">
-                <Clock size={22} className="text-green-600" />
-              </div>
+            <div className="flex gap-5 items-start">
+              <Clock size={18} className="text-brand-gold mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-poppins font-semibold text-brand-charcoal text-base">
-                  Opening Hours
-                </p>
-                <p className="font-inter text-gray-600 text-sm mt-1">
-                  Mon – Sat: 7:00 AM – 8:00 PM<br />
-                  Sunday: 8:00 AM – 2:00 PM
+                <p className="font-inter font-semibold text-brand-dark text-sm tracking-wide uppercase mb-1">Hours</p>
+                <p className="font-inter text-brand-muted text-sm leading-relaxed">
+                  Mon – Sat: 8:15 AM – 8:30 PM<br />Sunday: 8:15 AM – 3:00 PM
                 </p>
               </div>
             </div>
@@ -88,9 +66,8 @@ export default function FindUs() {
               href={MAPS_DIRECTIONS}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-brand-red/20 font-poppins w-fit"
+              className="inline-flex items-center gap-3 border border-brand-dark text-brand-dark text-xs font-semibold px-8 py-4 tracking-widest uppercase hover:bg-brand-dark hover:text-brand-cream transition-all font-inter w-fit"
             >
-              <MapPin size={18} />
               Get Directions
             </a>
           </div>

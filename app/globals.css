@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-poppins: "Poppins", sans-serif;
+  --font-playfair: "Playfair Display", Georgia, serif;
   --font-inter: "Inter", sans-serif;
 }
 
@@ -12,8 +12,9 @@ html {
 }
 
 body {
-  background-color: #FDF6F0;
+  background-color: #F7F3EE;
   font-family: var(--font-inter), sans-serif;
+  color: #1C1C1C;
 }
 
 @layer utilities {

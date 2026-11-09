@@ -10,15 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          red: "#D32F2F",
-          blue: "#29B6F6",
-          charcoal: "#1A1A2E",
-          offwhite: "#FDF6F0",
-          gray: "#F5F5F5",
+          cream: "#F7F3EE",
+          dark: "#1C1C1C",
+          // accent — swap gold "#C8A86B" back here to revert
+          gold: "#4A6FA5",
+          muted: "#6B6B6B",
+          border: "#E0D8CF",
+          white: "#FFFFFF",
         },
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"],
+        playfair: ["var(--font-playfair)", "Georgia", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
       keyframes: {

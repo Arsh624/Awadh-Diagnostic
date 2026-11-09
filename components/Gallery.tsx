@@ -11,44 +11,25 @@ const images = [
   { src: "/gallery/placeholder-6.jpg", alt: "Patient care" },
 ];
 
-// Duplicate for seamless infinite loop
 const allImages = [...images, ...images];
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 bg-brand-charcoal overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
-        <span className="text-brand-blue text-sm font-semibold uppercase tracking-widest font-inter">
-          Take a Look Inside
-        </span>
-        <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-white mt-2">
-          Our Centre
-        </h2>
+    <section id="gallery" className="py-16 md:py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-8 md:mb-14">
+        <p className="font-inter text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Take a Look Inside</p>
+        <h2 className="font-playfair font-bold text-4xl sm:text-5xl text-brand-dark">Our Centre</h2>
       </div>
 
-      {/* Carousel track */}
       <div
         className="flex gap-4 w-max animate-scroll-left"
         style={{ willChange: "transform" }}
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
-        }}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused"; }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.animationPlayState = "running"; }}
       >
         {allImages.map((img, i) => (
-          <div
-            key={`${img.src}-${i}`}
-            className="relative w-72 h-52 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl"
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-cover"
-              sizes="288px"
-            />
+          <div key={`${img.src}-${i}`} className="relative w-64 h-44 md:w-80 md:h-56 flex-shrink-0 overflow-hidden">
+            <Image src={img.src} alt={img.alt} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-500" sizes="320px" />
           </div>
         ))}
       </div>
